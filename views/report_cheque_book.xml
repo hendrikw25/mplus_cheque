@@ -5,26 +5,29 @@
             <t t-call="report.html_container">
                 <t t-foreach="docs" t-as="doc">
                     <div class="page">
+                        <div class="row"><div class="col-xs-12" style="height:20mm"></div></div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-3">Nama Nasabah</div>
-                            <div class="col-md-6">: <t t-esc="doc.name"/></div>
+                            <div class="col-xs-3 col-xs-offset-3">Nama Nasabah</div>
+                            <div class="col-xs-6">: <t t-esc="doc.name"/></div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-3">Nomor Rekening</div>
-                            <div class="col-md-6">: <t t-esc="doc.bank_acc_number"/></div>
+                            <div class="col-xs-3 col-xs-offset-3">Nomor Rekening</div>
+                            <div class="col-xs-6">: <t t-esc="doc.bank_acc_number"/></div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-3">Nama Cabang</div>
-                            <div class="col-md-6">: <t t-esc="doc.bank_name"/></div>
+                            <div class="col-xs-3 col-xs-offset-3">Nama Cabang</div>
+                            <div class="col-xs-6">: <t t-esc="doc.bank_name"/></div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-3">No Seri Warkat</div>
-                            <div class="col-md-6">: <t t-esc="doc.bank_cheque_series"/></div>
+                            <div class="col-xs-3 col-xs-offset-3">No Seri Warkat</div>
+                            <div class="col-xs-6">: <t t-esc="doc.bank_cheque_series"/></div>
                         </div>
                     </div>
                     <t t-foreach="range(doc.number_of_print)" t-as="n">
                         <div class="page">
-                            <h2 t-field="doc.name"/>
+                            <div style="position:absolute;top:40mm;left:70mm" t-field="doc.bank_acc_number"/>
+                            <div style="position:absolute;top:45mm;left:70mm" t-field="doc.name"/>
+                            <div style="position:absolute;top:50mm;left:70mm" t-esc="time.strftime('%d-%m-%Y')"/>
                         </div>
                     </t>
                 </t>
