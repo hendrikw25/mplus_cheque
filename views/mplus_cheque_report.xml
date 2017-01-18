@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report
+            id="action_report_cheque_book"
+            model="res.partner"
+            string="Cheque book"
+            name="mplus_cheque.report_cheque_book"
+            file="mplus_cheque.report_cheque_book"
+            report_type="qweb-pdf" 
+            paperformat="mplus_cheque.paperformat_bcacheck" />
+    </data>
+</openerp>
