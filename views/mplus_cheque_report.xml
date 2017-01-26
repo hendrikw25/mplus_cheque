@@ -8,6 +8,7 @@
             name="mplus_cheque.report_cheque_book"
             file="mplus_cheque.report_cheque_book"
             report_type="qweb-pdf" 
-            paperformat="mplus_cheque.paperformat_bcacheck" />
+            paperformat="mplus_cheque.paperformat_bcacheck" 
+            menu="False"/>
     </data>
 </openerp>
