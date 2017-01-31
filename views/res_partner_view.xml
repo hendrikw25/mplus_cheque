@@ -25,7 +25,7 @@
             <field name="type">ir.actions.server</field>
             <field name="model_id" ref="base.model_res_partner" />
             <field name="state">code</field>
-            <field name="code">self.direct_print_cheque_book(cr, uid, context.get('active_ids', []), context=context)</field>
+            <field name="code">action = self.direct_print_cheque_book(cr, uid, context.get('active_ids', []), context=context)</field>
         </record>
 
         <record id="action_direct_print_cheque" model="ir.values">
