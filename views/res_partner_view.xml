@@ -31,7 +31,7 @@
         <record id="action_direct_print_cheque" model="ir.values">
             <field name="model_id" ref="base.model_res_partner" />
             <field name="name">Direct print cheque book</field>
-            <field name="key2">client_action_multi</field>
+            <field name="key2">client_print_multi</field>
             <field name="value" eval="'ir.actions.server,' +str(ref('action_server_direct_print_cheque'))" />
             <field name="key">action</field>
             <field name="model">res.partner</field>
